@@ -24,6 +24,7 @@ Returns `true` if fst is installed and `false` otherwise
 """
 function fst_installed()
   R"""
+    memory.limit(1e10)
     fst_installed <- require(fst)
   """
   @rget fst_installed
